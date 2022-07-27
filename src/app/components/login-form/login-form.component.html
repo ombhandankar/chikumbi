@@ -1,0 +1,34 @@
+<mat-card
+  class ="box">
+  <form   class="add-form"  (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label for="username">Username</label>
+      <input
+        type="username"
+        name="username"
+        [(ngModel)] = "username"
+        id="username"
+        placeholder="username"
+      />
+    </div>
+    <div class="form-control">
+      <label for="day">Password </label>
+      <input
+        type="password"
+        name="password"
+        [(ngModel)] = "password"
+        id="password"
+        placeholder="Password"
+      />
+    </div>
+   
+    <input (click)="onSubmit()"  type="submit" value="Log In" class="btn btn-block" />
+    <span
+    class="spacer">
+
+    </span>
+    <input (click)="onSubmit()"  type="submit" value="Sign Up" class="btn btn-block" />
+
+  </form>
+
+</mat-card>

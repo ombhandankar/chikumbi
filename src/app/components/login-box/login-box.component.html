@@ -1,0 +1,28 @@
+
+<mat-card
+    *ngIf="!showLoginForm"
+    class ="box"   >
+    <mat-card-title> Log In</mat-card-title>
+
+    <div class="flexbox">
+      
+            <div 
+                class="btn-container">
+                <app-login-btn 
+                    text="Admin Log-In"
+                    (btnClick)="showAdminLoginForm()">
+                </app-login-btn>
+            </div>
+            <div 
+                class="btn-container">
+                <app-login-btn 
+                    text="Viewer Log-In">
+                </app-login-btn>
+            </div>
+            
+     
+    
+    </div>
+
+</mat-card>
+
