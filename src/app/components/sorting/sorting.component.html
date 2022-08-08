@@ -1,0 +1,43 @@
+<div class="padding">
+    <mat-toolbar>
+        <mat-toolbar-row>
+            <mat-form-field appearance="fill">
+                <mat-label>Select Class</mat-label>
+                <mat-select [(ngModel)]="defaultClass">
+                    <mat-option *ngFor="let c of classess"  [value]="c" (click)="onClass(c)">{{c}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Select Section</mat-label>
+                <mat-select [(ngModel)]="defaultSection">
+                    <mat-option *ngFor="let s of sectionss" [value]="s" (click)="onSection(s)">{{s}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Sort By</mat-label>
+                <mat-select [(ngModel)]="defaultValues">
+                    <mat-option value="None" #none (click)="onSortBy(none.value)" >None</mat-option>
+                    <mat-option value="marks" #marks (click)="onSortBy(marks.value)">Marks</mat-option>
+                    <mat-option value="age" #age (click)="onSortBy(age.value)">Age</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Order By</mat-label>
+                <mat-select [disabled]="disableValue" [(ngModel)]="defaultValue">
+                    <mat-option value="None" #none (click)="onOrderBy(none.value)" >None</mat-option>
+                    <mat-option value=1 #asc (click)="onOrderBy(asc.value)">Ascending</mat-option>
+                    <mat-option value=-1 #desc (click)="onOrderBy(desc.value)">Descending</mat-option>
+                </mat-select>
+            </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Search</mat-label>
+                  <mat-icon matPrefix>search</mat-icon>
+                  <input type="text" matInput placeholder="Type any name here" [(ngModel)]="searchValue" (keyup)="onSearch()">
+                  <button *ngIf="searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="onClear()">
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </mat-form-field>
+            
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>

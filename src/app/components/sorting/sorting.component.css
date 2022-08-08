@@ -1,0 +1,18 @@
+.padding{
+    padding: 2% 5% 0% 5%;
+}
+mat-toolbar{
+    height: 105px;
+    box-shadow: 1px 1px 12px 0px rgba(112,111,112,0.75);
+}
+mat-form-field{
+    padding: 1%;
+    top: 55%;
+    width: 25%;  
+}
+mat-icon{
+    margin-right: 10px;
+}
+.example-full-width {
+    width: 50%;
+}

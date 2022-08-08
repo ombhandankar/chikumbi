@@ -1,0 +1,29 @@
+
+.paddings{
+    padding: 5%;
+}
+.padding{
+    padding: 2% 5% 3% 5%;
+}
+.padd{
+  padding: 0% 5% 0% 5%;
+}
+table {
+    box-shadow: 1px 1px 12px 0px rgba(112,111,112,0.75);
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    text-align: left;
+    padding: 8px;
+    height: 55px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .flex{
+    margin-left: 85%;
+  }
