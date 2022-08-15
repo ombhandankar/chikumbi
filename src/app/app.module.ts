@@ -13,6 +13,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
 import { InfoFormComponent } from './components/info-form/info-form.component';
 import { BtnComponent } from './components/btn/btn.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { BtnComponent } from './components/btn/btn.component';
     AdminProfileComponent,
     InfoFormComponent,
     BtnComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
