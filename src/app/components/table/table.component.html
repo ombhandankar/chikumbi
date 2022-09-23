@@ -1,0 +1,46 @@
+<app-sorting (sortClick)="handleClickSort($event)" (classClick)="hanndleClassClick($event)" (searchName)="handleSearch($event)"></app-sorting>
+
+<div class="padding">
+
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>RegNo</th>
+            <th>Age</th>
+            <th>DOB</th>
+            <th>Marks</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let item of dataSource">
+            <td>{{item.slNo}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.regno}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.bdate}}</td>
+            <td>{{item.marks}}</td>
+            <td>
+                <span class="paddings">
+                    <button mat-mini-fab color="accent" aria-label="Example icon button with a home icon">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </span>
+                <span class="paddings">
+                    <button mat-mini-fab color="warn" aria-label="Example icon button with a home icon"
+                        (click)="openDialog(item.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </span>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+    <div class="padd">
+        <mat-paginator [length]="totalLength" [pageSize]="postSize" [pageSizeOptions]="pageOption" (page)="onChangePage($event)" aria-label="Select page">
+        </mat-paginator>
+    </div>
+    
+    <div class="padding flex">
+        <button mat-raised-button color="accent">Add Student</button>
+    </div>
