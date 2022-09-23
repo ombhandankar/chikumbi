@@ -1,34 +1,35 @@
-<mat-card
-  class ="box">
-  <form   class="add-form"  (ngSubmit)="onSubmit()">
-    <div class="form-control">
-      <label for="username">Username</label>
-      <input
-        type="username"
-        name="username"
-        [(ngModel)] = "username"
-        id="username"
-        placeholder="username"
-      />
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card my-5">
+
+        <form class="card-body p-lg-5" [formGroup]="loginForm" (submit)="loginUser()">
+
+          
+          <div class="mb-3">
+            <input 
+              type="email" 
+              class="form-control" 
+              formControlName="email" 
+              id="email" 
+              aria-describedby="emailHelp"
+              placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <input 
+              type="password" 
+              class="form-control" 
+              formControlName="password"
+              id="password" 
+              placeholder="password">
+          </div>
+          <div class="text-center">
+            <button 
+              type="submit" class="btn btn-color px-5 mb-5 w-100">Login</button></div>
+          
+        </form>
+      </div>
+
     </div>
-    <div class="form-control">
-      <label for="day">Password </label>
-      <input
-        type="password"
-        name="password"
-        [(ngModel)] = "password"
-        id="password"
-        placeholder="Password"
-      />
-    </div>
-   
-    <input (click)="onSubmit()"  type="submit" value="Log In" class="btn btn-block" />
-    <span
-    class="spacer">
-
-    </span>
-    <input (click)="onSubmit()"  type="submit" value="Sign Up" class="btn btn-block" />
-
-  </form>
-
-</mat-card>
+  </div>
+</div>

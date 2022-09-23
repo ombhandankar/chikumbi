@@ -7,7 +7,7 @@ import { UiService } from 'src/app/services/ui.service';
   styleUrls: ['./login-box.component.css']
 })
 export class LoginBoxComponent implements OnInit {
-  urlAdmin ="/login-form";
+  urlForm ="/login-form";
   showLoginForm: boolean = false;
 
  
@@ -22,7 +22,7 @@ export class LoginBoxComponent implements OnInit {
 
   showAdminLoginForm()
   { 
-      this.router.navigateByUrl(this.urlAdmin);//this handles the route/path
+      this.router.navigateByUrl(this.urlForm);//this handles the route/path
       this.uiService.onShowLogin(); //handles UI
   }
 
